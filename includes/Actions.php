@@ -178,7 +178,7 @@ class Actions
             ."<li v-for='todoVal in todos' :key='todoVal.id'><input type='checkbox' @click='updateId(todoVal.id)'>"
             ."<input type='text' v-model='todoVal.name' @click='updateTodoName(todoVal.name)' @keyup.enter='onUpdate(todoVal.id)' :ref='todoVal.id'><a href='#' @click='onDelete(todoVal.id)'>delete</a></li></ul>"
             ."<ul class='completeTodo' v-else>"
-            ."<li v-for='todoCom in todos' :key='todoCom.id'>{{todoCom.name}}</li></ul>"
+            ."<li v-for='todoCom in todosComp' :key='todoCom.id'>{{todoCom.name}}</li></ul>"
             ."<ul class='controller'>"
             ."<li>({{count}})Todo</li>"
             ."<li><button @click='showToDoList'>All</button></li>"

@@ -7,6 +7,7 @@
                 todoUpdateName: "",
             },
             todos: [],
+			todosComp: [],
             ids: [],
             count: 0,
             todo: true,
@@ -110,7 +111,7 @@
                     headers: {'X-WP-Nonce': object.nonce}
                 })
                         .then((response) => {
-                            this.todos = response.data;
+                            this.todosComp = response.data;
                         })
                         .catch((error) => {
                             console.log(error);
@@ -158,6 +159,7 @@
                                     alert('All clear');
                                     this.fetchTodo();
                                     this.todo = true;
+									this.todosComp = [];
                                 }
                             })
                             .catch((error) => {
