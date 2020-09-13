@@ -1,8 +1,4 @@
 (function () {
-    Vue.component('todo-component', {
-        props: ['todo'],
-        template: '<li>{{todo}}</li>'
-    })
     var vm = new Vue({
         el: document.querySelector('#jubayerID'),
         data: {
